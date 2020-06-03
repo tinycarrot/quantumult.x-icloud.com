@@ -13,19 +13,54 @@
     </style>
   </head>
   <body>
-    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown1"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a> </div>
+          </li>
+          <li class="nav-item"> <a class="nav-link disabled" href="#">Disabled</a> </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+<div class="jumbotron jumbotron-fluid text-center">
+   <img src="images/Fake iAP LOGO 02.png" class="img-fluid" alt="Fake iAP LOGO">
+	<br><br>
+<h1 class="display-5">CÀI ĐẶT CẤU HÌNH QUANTUMULT X</h1>
+       <p class="lead">Phiên bản <strong>2.1</strong> | <strong>01.06.2020</strong>&nbsp; &nbsp;&nbsp;</p>
 
-    <div class="jumbotron jumbotron-fluid text-center">
-       <h1 class="display-4">Quantumult X IPA Installer</h1>
-       <p class="lead">Phiên bản <strong>1.0.6</strong> | Account ID: <strong>quantumult.x@icloud.com</strong>&nbsp; &nbsp;&nbsp;</p>
-       <hr class="my-4">
-       <p><strong><em>Sau khi tải và cài đặt thành công các bạn hãy dùng ID và Pass đã cung cấp trên kênh Discord để đăng nhập!&nbsp;&nbsp;</em></strong></p>
-       <p class="lead">
-          <a class="btn btn-primary btn-lg" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/tinycarrot/quantumult.x-icloud.com/master/quantumult.x.icloud.plist" role="button">Tải Quantumult X&nbsp;</a>
-       </p><br>
+	<!-- Tải cấu hình -->
+	<div class="pt-1">
+				<!-- Collapse buttons -->
+				<div>
+					<!-- Material input -->
+					<div class="md-form mx-3">
+						<input type="text" id="myInput" value="https://raw.githubusercontent.com/tinycarrot/tinycarrot/master/quantumutlx/fakeiapx_test.conf" class="form-control text-center" disabled="disabled">
+						<button type="button" class="btn btn-primary btn-lg" onclick="myFunction2()">Sao chép link và mở Quantumult X</button>
+					</div>
+
+				</div>
+				<!-- / Collapse buttons -->
+			</div>
+	<!-- Tải cấu hình -->
+	<br>
+	
+	<p class="lead">
+          <a class="btn btn-primary btn-lg" href="quantumult-x:///update-configuration?remote-resource=%7B%0A%20%20%22server_remote%22:%20%5B%0A%20%20%20%20%22https://github.com/tinycarrot/tinycarrot/raw/master/quantumutlx/remote/fakeiap_server_200422.txt,%20tag=Fake%20iAP%20Server%22%0A%20%20%5D,%0A%20%20%22filter_remote%22:%20%5B%0A%20%20%20%20%22https://raw.githubusercontent.com/tinycarrot/tinycarrot/master/Profile/quantumult/fakeiap-filter.txt,%20tag=Fake%20iAP%20Filter%22%0A%20%20%5D,%0A%20%20%22rewrite_remote%22:%20%5B%0A%20%20%20%20%22https://raw.githubusercontent.com/bigdargon/hostsVN/master/option/hostsVN-quantumultX-rewrite.conf,%20tag=%F0%9F%87%BB%F0%9F%87%B3hostsVN%22%0A%20%20%5D%0A%7D%0A" role="button">Đồng bộ cấu hình Fake iAP Server&nbsp;</a>
+       </p>
+	<br>
 		       <p><strong><em>Trong trường hợp đã nhập đúng ID và Pass nhưng vẫn bị văng hoặc crash các bạn hãy đăng nhập tài khoảng đó vào Appstore và tải 1 App Free trong mục đã mua!&nbsp;&nbsp;</em></strong></p>
 
-    </div>
+  </div>
     <div class="container">
        <div class="row">
           <div class="text-center col-lg-6 offset-lg-3">
@@ -34,11 +69,28 @@
           </div>
        </div>
     </div>
+	
+	<script>
+			function myFunction2() {
+				/* Get the text field */
+				var copyText = document.getElementById("myInput");
+
+				/* Select the text field */
+				copyText.select();
+				copyText.setSelectionRange(0, 99999);/*For mobile devices*/
+
+				/* Copy the text inside the text field */
+				document.execCommand("copy");
+				window.location = "quantumult-x://";
+				/* Alert the copied text */
+				alert("Đã sao chép link cấu hình - Ấn vào nút bên cạnh để mở Quantumult X");
+			}
+	</script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
     <script src="js/jquery-3.4.1.min.js"></script>
 
     <!-- Include all compiled plugins (below), or include individual files as needed --> 
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap-4.4.1.js"></script>
-  </body>
+</body>
 </html>
